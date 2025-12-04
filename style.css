@@ -95,6 +95,10 @@ img {
   font-size: var(--font-subheading);
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .link-animation::after {
   content: "";
   position: absolute;
@@ -114,6 +118,10 @@ img {
 
 .link-animation.active::after {
   opacity: 1;
+}
+
+.header-wrapper {
+  border-bottom: 0.1rem solid var(--border-subtle);
 }
 
 header {
@@ -273,9 +281,8 @@ footer {
 #news {
   width: 80%;
   max-width: 130rem;
-  min-height: 90svh;
   margin: auto;
-  padding-bottom: 5rem;
+  padding-bottom: 7rem;
   display: flex;
   flex-direction: column;
 
@@ -343,7 +350,6 @@ footer {
 #contact {
   width: 80%;
   max-width: 130rem;
-  min-height: 90svh;
   margin: auto;
   padding-bottom: 5rem;
   display: flex;
@@ -406,7 +412,68 @@ footer {
   }
 }
 
+/* Om oss page styling */
+
+#about {
+  width: 80%;
+  max-width: 130rem;
+  min-height: 90svh;
+  margin: auto;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  .about-title {
+    text-align: center;
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-bottom: 5rem;
+    }
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5rem 10rem;
+
+    .content-wrapper {
+      flex: 1 1 40rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    img {
+      width: 40rem;
+    }
+  }
+
+  #about-company {
+    flex-wrap: wrap-reverse;
+  }
+
+  #about-cristian {
+    flex-wrap: wrap-reverse;
+  }
+}
+
 /* Media queries */
+
+@media only screen and (max-width: 1124px) {
+  #about {
+    padding-bottom: 0;
+    section {
+      justify-content: center;
+      margin-bottom: 5rem;
+    }
+  }
+}
 
 @media only screen and (max-width: 874px) {
   footer {
@@ -420,6 +487,8 @@ footer {
   }
 }
 
+/* Mobile */
+
 @media only screen and (max-width: 480px) {
   :root {
     --font-h1: 3.5rem;
@@ -429,6 +498,14 @@ footer {
     --font-cta-btn: 1.7rem;
     --font-nav-a: 1.7rem;
     --font-subheading: 1.7rem;
+  }
+
+  #about {
+    section {
+      img {
+        width: 30rem;
+      }
+    }
   }
 
   footer {
