@@ -54,7 +54,8 @@ h3 {
 }
 
 h4 {
-  font-size: var(--font-h4);
+  font-size: var(--font-p);
+  text-decoration: underline;
 }
 
 p {
@@ -74,6 +75,11 @@ textarea,
 button[type="submit"] {
   font-family: "Gabriela", serif;
   font-size: var(--font-p);
+}
+
+li {
+  font-size: var(--font-p);
+  list-style-type: none;
 }
 
 input,
@@ -156,10 +162,6 @@ nav {
     gap: 3rem;
   }
 
-  li {
-    list-style-type: none;
-  }
-
   a {
     position: relative;
     font-size: var(--font-nav-a);
@@ -198,10 +200,6 @@ footer {
     ul {
       display: flex;
       gap: 1rem;
-    }
-
-    li {
-      list-style-type: none;
     }
 
     svg {
@@ -463,6 +461,56 @@ footer {
   }
 }
 
+/* Produkter page styling */
+
+#products {
+  width: 80%;
+  max-width: 89rem;
+  min-height: 90svh;
+  margin: auto;
+  padding-block: 5rem;
+  display: flex;
+  flex-direction: column;
+
+  .products-title {
+    margin-bottom: 4rem;
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    margin-bottom: 0.6rem;
+  }
+
+  li {
+    margin-bottom: 2.5rem;
+  }
+
+  #prices {
+    margin-bottom: 4rem;
+  }
+
+  #assortment {
+    .entry {
+      margin-bottom: 3rem;
+    }
+
+    .product {
+      margin-bottom: 2rem;
+    }
+  }
+}
 /* Media queries */
 
 @media only screen and (max-width: 1124px) {
